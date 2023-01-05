@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 
 type CellType = {
   value: string,
-  key: number,
 }
 
 export default function Cell(props: CellType) {

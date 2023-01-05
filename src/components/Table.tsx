@@ -1,24 +1,21 @@
-import React from 'react'
+import React, {ReactNode} from 'react'
 import Cell from './Cell'
 import { cellsGrid } from '../data/cellsGrid'
 
-export default function Table() {
+export default function Table(): ReactNode {
 
-  const makeTable = (grid: string[][]) => {
-    let key = 0
-    for (let i = 0; i < grid.length; i++ ){
-      for (let j = 0; j < grid[i].length; j++) {
-        key+=1
-        return (
-            <Cell value={grid[i][j]} key={key}/>
-        )
-      }
-    }
-  }
+  let cellsArray = [...cellsGrid]
+
+
+
 
   return (
-    <div>
-
-    </div>
+    <>
+      {cellsArray.map((row, indexRow) => {
+        return row.map((cell, indexCell) => {
+          return <Cell value={cell} key={"" + indexRow + indexCell}/>
+        })
+      })}
+    </>
   )
 }
