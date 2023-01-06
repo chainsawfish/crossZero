@@ -9,7 +9,7 @@ export default function Table() {
     <div className="max-w-min min-w-max grid grid-cols-3 gap-0 mx-auto place-items-center justify-items-center items-center">
       {cellsArray.map((row, indexRow) => {
         return row.map((cell, indexCell) => {
-          return <Cell value={''} key={"" + indexRow + indexCell} />
+          return <Cell value={cell} key={"" + indexRow + indexCell} row={indexRow} cell={indexCell}/>
         })
       })}
     </div>

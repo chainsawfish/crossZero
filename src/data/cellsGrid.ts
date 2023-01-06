@@ -1,1 +1,4 @@
-export const cellsGrid : string[][] = [['','',''],['','',''],['','','']]
+export let cellsGrid : string[][] = [['','',''],['','',''],['','','']]
+export const emptyGrid: string[][] = [['','',''],['','',''],['','','']]
+
+export const clearGrid = () => {cellsGrid = [...emptyGrid]}
